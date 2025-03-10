@@ -7,6 +7,8 @@ namespace ECommerceApp.Models;
 [Index(nameof(Email),Name = "IX_Email_Unique", IsUnique = true)]
 public class Customer
 {
+    public int Id { get; set; }
+    
     [Required(ErrorMessage = "Please enter your first name")]
     [StringLength(50, MinimumLength = 2, ErrorMessage = "First name must be between 2 and 50 characters")]
     public string? FirstName { get; set; }
