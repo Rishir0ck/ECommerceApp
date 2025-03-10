@@ -27,3 +27,6 @@ DTOs--
    For Update migratioon into Database--
 
     dotnet ef database update
+
+Connection string
+    "EFCoreDBConnection": "Data Source=TEP049SOFT136;Initial Catalog=ECommerceDB;Persist Security Info=False;User ID=sa;Password=Admin@123;TrustServerCertificate=True"
