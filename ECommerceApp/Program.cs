@@ -20,8 +20,10 @@ public class Program
             // Configure EF Core with SQL Server
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("EFCoreDBConnection")));
-            // Registering the CustomerService
+            // Registering the CustomerService 
             builder.Services.AddScoped<CustomerServices>();
+            // Registering the AddressService
+            builder.Services.AddScoped<AddressService>();
             var app = builder.Build();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
